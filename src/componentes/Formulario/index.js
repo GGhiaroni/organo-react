@@ -15,17 +15,29 @@ const Formulario = () => {
     "DevOps",
   ];
 
+  const enviarFormulario = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <section className="formulario">
-      <form>
+      <form onSubmit={enviarFormulario}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
-        <InputsTexto label="Nome" placeholder="Digite o seu nome" />
-        <InputsTexto label="Cargo" placeholder="Digite o seu cargo" />
+        <InputsTexto
+          obrigatorio={true}
+          label="Nome"
+          placeholder="Digite o seu nome"
+        />
+        <InputsTexto
+          obrigatorio={true}
+          label="Cargo"
+          placeholder="Digite o seu cargo"
+        />
         <InputsTexto
           label="Imagem"
           placeholder="Informe o endereço da imagem"
         />
-        <DropdownMenu label="Time" itens={times} />
+        <DropdownMenu obrigatorio={true} label="Time" itens={times} />
         <Button>Criar card</Button>
       </form>
     </section>
