@@ -5,16 +5,6 @@ import InputsTexto from "../InputTexto";
 import "./Formulario.css";
 
 const Formulario = (props) => {
-  const times = [
-    "Programação",
-    "Front-End",
-    "Back-End",
-    "FullStack",
-    "Data Science",
-    "Mobile",
-    "DevOps",
-  ];
-
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
@@ -63,7 +53,7 @@ const Formulario = (props) => {
         <DropdownMenu
           obrigatorio={true}
           label="Time"
-          itens={times}
+          itens={props.times}
           valor={time}
           aoAlterar={(valor) => setTime(valor)}
         />
