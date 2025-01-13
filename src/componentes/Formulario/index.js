@@ -4,7 +4,7 @@ import DropdownMenu from "../DropdownMenu";
 import InputsTexto from "../InputTexto";
 import "./Formulario.css";
 
-const Formulario = () => {
+const Formulario = (props) => {
   const times = [
     "Programação",
     "Front-end",
@@ -23,7 +23,18 @@ const Formulario = () => {
 
   const enviarFormulario = (e) => {
     e.preventDefault();
-    console.log(nome, cargo, imagem, time);
+
+    props.aoCadastrarColaborador({
+      nome: nome,
+      cargo: cargo,
+      imagem: imagem,
+      time: time,
+    });
+
+    setNome("");
+    setCargo("");
+    setImagem("");
+    setTime("");
   };
 
   return (
