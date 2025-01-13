@@ -1,3 +1,4 @@
+import Button from "../Button";
 import DropdownMenu from "../DropdownMenu";
 import InputsTexto from "../InputTexto";
 import "./Formulario.css";
@@ -25,6 +26,7 @@ const Formulario = () => {
           placeholder="Informe o endereço da imagem"
         />
         <DropdownMenu label="Time" itens={times} />
+        <Button>Criar card</Button>
       </form>
     </section>
   );
