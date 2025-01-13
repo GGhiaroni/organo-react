@@ -1,7 +1,19 @@
+import DropdownMenu from "../DropdownMenu";
 import InputsTexto from "../InputTexto";
 import "./Formulario.css";
 
 const Formulario = () => {
+  const times = [
+    "Programação",
+    "Front-end",
+    "Back-end",
+    "Fullstack",
+    "Data Science",
+    "Mobile",
+    "UX e Design",
+    "DevOps",
+  ];
+
   return (
     <section className="formulario">
       <form>
@@ -12,6 +24,7 @@ const Formulario = () => {
           label="Imagem"
           placeholder="Informe o endereço da imagem"
         />
+        <DropdownMenu label="Time" itens={times} />
       </form>
     </section>
   );
