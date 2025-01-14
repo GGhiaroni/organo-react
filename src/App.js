@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Banner from "./componentes/Banner";
+import Footer from "./componentes/Footer";
 import Formulario from "./componentes/Formulario";
 import Time from "./componentes/Time";
 
@@ -69,6 +70,7 @@ function App() {
           )}
         />
       ))}
+      <Footer />
     </div>
   );
 }
