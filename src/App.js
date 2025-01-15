@@ -248,8 +248,10 @@ function App() {
     ]);
   };
 
-  function deletarColaborador() {
-    console.log("deletando colaborador");
+  function deletarColaborador(id) {
+    setColaboradores(
+      colaboradores.filter((colaborador) => colaborador.id !== id)
+    );
   }
 
   function alterarCorDoTime(cor, id) {
