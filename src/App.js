@@ -5,7 +5,7 @@ import Formulario from "./componentes/Formulario";
 import Time from "./componentes/Time";
 
 function App() {
-  const timesCadastrados = [
+  const [timesCadastrados, setTimesCadastrados] = useState([
     {
       nome: "Programação",
       corPrimaria: "#57c278",
@@ -41,7 +41,7 @@ function App() {
       corPrimaria: "#FF8A29",
       corSecundaria: "#FFEEDF",
     },
-  ];
+  ]);
 
   const inicial = [
     {
@@ -227,6 +227,17 @@ function App() {
     console.log("deletando colaborador");
   }
 
+  function alterarCorDoTime(cor, nome) {
+    setTimesCadastrados(
+      timesCadastrados.map((time) => {
+        if (time.nome === nome) {
+          time.corSecundaria = cor;
+        }
+        return time;
+      })
+    );
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -246,6 +257,7 @@ function App() {
               (colaborador) => colaborador.time === time.nome
             )}
             aoDeletar={deletarColaborador}
+            alterarCorDoTime={alterarCorDoTime}
           />
         ))}
       </section>

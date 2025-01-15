@@ -10,7 +10,12 @@ const Time = (props) => {
         "--cor-primaria": props.corPrimaria,
       }}
     >
-      <input type="color" className="input-color" value={props.corSecundaria} />
+      <input
+        onChange={(e) => props.alterarCorDoTime(e.target.value, props.nome)}
+        type="color"
+        className="input-color"
+        value={props.corSecundaria}
+      />
       <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
       <div className="colaboradores">
         {props.colaboradores.map((colaborador, indice) => (
