@@ -223,6 +223,10 @@ function App() {
     ]);
   };
 
+  function deletarColaborador() {
+    console.log("deletando colaborador");
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -241,6 +245,7 @@ function App() {
             colaboradores={colaboradores.filter(
               (colaborador) => colaborador.time === time.nome
             )}
+            aoDeletar={deletarColaborador}
           />
         ))}
       </section>

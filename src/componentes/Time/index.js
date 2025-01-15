@@ -12,13 +12,14 @@ const Time = (props) => {
     >
       <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
       <div className="colaboradores">
-        {props.colaboradores.map((colaborador) => (
+        {props.colaboradores.map((colaborador, indice) => (
           <Colaborador
             corDeFundoDoCard={props.corPrimaria}
-            key={colaborador.nome}
+            key={indice}
             nome={colaborador.nome}
             cargo={colaborador.cargo}
             imagem={colaborador.imagem}
+            aoDeletar={props.aoDeletar}
           />
         ))}
       </div>
