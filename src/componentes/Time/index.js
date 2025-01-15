@@ -12,7 +12,7 @@ const Time = (props) => {
       }}
     >
       <input
-        onChange={(e) => props.alterarCorDoTime(e.target.value, props.nome)}
+        onChange={(e) => props.alterarCorDoTime(e.target.value, props.id)}
         type="color"
         className="input-color"
         value={props.cor}
