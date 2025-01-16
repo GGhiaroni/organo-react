@@ -1,7 +1,7 @@
 import "./Input.css";
 
 const Input = ({
-  type = "false",
+  type = "text",
   label,
   placeholder,
   valor,
@@ -13,7 +13,7 @@ const Input = ({
   };
 
   return (
-    <div className="campo">
+    <div className={`campo campo-${type}`}>
       <label>{label}</label>
       <input
         type={type}

@@ -78,6 +78,7 @@ const Formulario = (props) => {
         />
         <Input
           obrigatorio={true}
+          type="color"
           label="Cor"
           placeholder="Cor do time"
           valor={corTime}
