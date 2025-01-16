@@ -39,6 +39,7 @@ h2::after {
   left: 50%;
   transform: translateX(-50%);
   bottom: -10px;
+  position: absolute;
 }
 
 h3 {
