@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../Button";
 import DropdownMenu from "../DropdownMenu";
-import InputsTexto from "../InputTexto";
+import Input from "../Input";
 import "./Formulario.css";
 
 const Formulario = (props) => {
@@ -32,21 +32,21 @@ const Formulario = (props) => {
     <section className="formulario-container">
       <form className="formulario" onSubmit={enviarFormulario}>
         <h2>Preencha os dados para criar o card do colaborador.</h2>
-        <InputsTexto
+        <Input
           obrigatorio={true}
           label="Nome"
           placeholder="Digite o seu nome"
           valor={nome}
           aoAlterar={(valor) => setNome(valor)}
         />
-        <InputsTexto
+        <Input
           obrigatorio={true}
           label="Cargo"
           placeholder="Digite o seu cargo"
           valor={cargo}
           aoAlterar={(valor) => setCargo(valor)}
         />
-        <InputsTexto
+        <Input
           label="Imagem"
           placeholder="Informe o endereço da imagem"
           valor={imagem}
@@ -69,14 +69,14 @@ const Formulario = (props) => {
         }}
       >
         <h2>Preencha os dados para criar um novo time.</h2>
-        <InputsTexto
+        <Input
           obrigatorio={true}
           label="Nome"
           placeholder="Digite o nome do time"
           valor={nomeTime}
           aoAlterar={(valor) => setNomeTime(valor)}
         />
-        <InputsTexto
+        <Input
           obrigatorio={true}
           label="Cor"
           placeholder="Cor do time"
