@@ -1,5 +1,5 @@
 import hexToRgba from "hex-to-rgba";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import "./Colaborador.css";
 
 const Colaborador = ({
@@ -9,7 +9,14 @@ const Colaborador = ({
   cargo,
   corDeFundoDoCard,
   aoDeletar,
+  favorito,
+  aoFavoritar,
 }) => {
+  function favoritar() {
+    aoFavoritar(id);
+    console.log(favorito);
+  }
+
   return (
     <div className="colaborador">
       <AiFillCloseCircle
@@ -27,6 +34,13 @@ const Colaborador = ({
       <div className="rodape">
         <h4>{nome}</h4>
         <h5>{cargo}</h5>
+        <div className="favoritar">
+          {favorito ? (
+            <AiFillHeart size={25} onClick={favoritar} />
+          ) : (
+            <AiOutlineHeart size={25} onClick={favoritar} />
+          )}
+        </div>
       </div>
     </div>
   );

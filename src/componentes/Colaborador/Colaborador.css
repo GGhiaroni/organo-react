@@ -44,3 +44,8 @@
   right: -10px;
   top: -10px;
 }
+
+.favoritar {
+  cursor: pointer;
+  margin-top: 20px;
+}
